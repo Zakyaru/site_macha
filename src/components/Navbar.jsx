@@ -64,6 +64,11 @@ const Navbar = () => {
       FAQ
     </Link>
   </li>
+  <li>
+    <Link to="/contact" className="text-lg underline hover:font-semibold" onClick={() => handleTabClick("Contact")}>
+      Contact
+    </Link>
+  </li>
 </ul>
 
       </div>

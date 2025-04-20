@@ -4,6 +4,7 @@ import Visites from "./pages/visites";
 import VisitesDetails from "./pages/visitesDetails";
 import Layout from "./components/Layout";
 import Faq from "./pages/faq";
+import Contact from "./pages/contact";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="visites" element={<Visites />} />
           <Route path="visites/:id" element={<VisitesDetails />} />
           <Route path="faq" element={<Faq />} />
+          <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
     </Router>
