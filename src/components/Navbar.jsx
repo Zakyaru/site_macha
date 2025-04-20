@@ -60,8 +60,8 @@ const Navbar = () => {
     </Link>
   </li>
   <li>
-    <Link to="/visites/details" className="text-lg underline hover:font-semibold" onClick={() => handleTabClick("Details")}>
-      Details
+    <Link to="/faq" className="text-lg underline hover:font-semibold" onClick={() => handleTabClick("Faq")}>
+      FAQ
     </Link>
   </li>
 </ul>

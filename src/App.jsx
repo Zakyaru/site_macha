@@ -3,6 +3,7 @@ import Home from "./pages/home";
 import Visites from "./pages/visites";
 import VisitesDetails from "./pages/visitesDetails";
 import Layout from "./components/Layout";
+import Faq from "./pages/faq";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="visites" element={<Visites />} />
           <Route path="visites/:id" element={<VisitesDetails />} />
+          <Route path="faq" element={<Faq />} />
         </Route>
       </Routes>
     </Router>
