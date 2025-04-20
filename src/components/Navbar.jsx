@@ -4,7 +4,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [selectedTab, setSelectedTab] = useState("Onglet 1");
+  const [selectedTab, setSelectedTab] = useState("Accueil");
 
   const handleTabClick = (tab) => {
     setSelectedTab(tab);
