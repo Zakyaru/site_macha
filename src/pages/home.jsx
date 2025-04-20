@@ -19,8 +19,9 @@ export default function Home() {
       <div className="flex flex-col items-center px-4 py-8 gap-8">
         {/* Boutons */}
         <div className="flex flex-col sm:flex-row gap-4">
-          <Button text="ПЕРЕЙТИ К ЭКСКУРСИЯМ" />
-          <Button text="НАПИСАТЬ MHE WHATS APP" />
+          <Button text="ПОСМОТРЕТЬ ЭКСКУРСИИ" to="/visites"/>
+          <Button text="ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ" to="/faq"/>
+          <Button text="НАПИСАТЬ MHE" to="/contact"/>
         </div>
 
         <p className="text-2xl font-semibold mt-8">ОБО МНЕ</p>

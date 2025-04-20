@@ -35,7 +35,7 @@ export default function VisitCard({
         </div>
 
         <Link to={`/visites/${id}`}>
-          <button className="w-full px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition">
+          <button className="w-full cursor-pointer px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition">
             Подробнее
           </button>
         </Link>
