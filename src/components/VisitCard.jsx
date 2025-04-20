@@ -1,32 +1,35 @@
 import React from "react"
-import { FaClock, FaEuroSign } from "react-icons/fa"
-import chateauImg from "../assets/chateau2.jpg"
+import { FaClock, FaTag } from "react-icons/fa"
 
-export default function VisitCard() {
+export default function VisitCard({ title, image, description, duration, price }) {
   return (
-    <div className="bg-gray-100 rounded-xl shadow p-4 max-w-sm flex flex-col items-center gap-3">
-      <h2 className="text-xl font-semibold text-center">Chambord</h2>
-      <img
-        src={chateauImg}
-        alt="Château de Chambord"
-        className="rounded-md object-cover w-full h-48"
-      />
-      <p className="text-sm text-justify">
-        Экскурсия в замок Шамбор, жемчужину французского Ренессанса, знаменитую своей впечатляющей архитектурой и двойной винтовой лестницей, приписываемой Леонардо да Винчи.
-      </p>
-
-      <div className="flex flex-col gap-2 w-full px-2 text-gray-700 text-sm">
-        <span className="flex items-center gap-1">
-          <FaClock /> 2 heures
-        </span>
-        <span className="flex items-center gap-1">
-          <FaEuroSign /> 100 €
-        </span>
+    <div className="bg-gray-100 rounded-xl shadow p-4 max-w-sm w-full h-full flex flex-col justify-between">
+      
+      {/* Haut : titre, image, texte */}
+      <div>
+        <h2 className="text-xl font-semibold text-center">{title}</h2>
+        <img
+          src={image}
+          alt={title}
+          className="rounded-md object-cover w-full h-48 mt-2 mb-4"
+        />
+        <p className="text-sm text-justify">{description}</p>
       </div>
 
-      <button className="bg-gray-200 cursor-pointer mt-2 px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition">
-        Подробнее
-      </button>
+      {/* Bas : durée, prix, bouton */}
+      <div className="mt-6">
+        <div className="flex flex-col items-start gap-2 px-2 text-gray-700 text-sm mb-3">
+          <span className="flex items-center gap-1">
+            <FaClock /> {duration}
+          </span>
+          <span className="flex items-center gap-1">
+            <FaTag /> {price} €
+          </span>
+        </div>
+        <button className="w-full px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition">
+          Подробнее
+        </button>
+      </div>
     </div>
   )
 }
