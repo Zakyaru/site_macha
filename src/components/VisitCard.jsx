@@ -1,10 +1,17 @@
-import React from "react"
-import { FaClock, FaTag } from "react-icons/fa"
+import React from "react";
+import { FaClock, FaTag } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-export default function VisitCard({ title, image, description, duration, price }) {
+export default function VisitCard({
+  id,
+  title,
+  image,
+  description,
+  duration,
+  price,
+}) {
   return (
     <div className="bg-gray-100 rounded-xl shadow p-4 max-w-sm w-full h-full flex flex-col justify-between">
-      
       {/* Haut : titre, image, texte */}
       <div>
         <h2 className="text-xl font-semibold text-center">{title}</h2>
@@ -26,10 +33,13 @@ export default function VisitCard({ title, image, description, duration, price }
             <FaTag /> {price} €
           </span>
         </div>
-        <button className="w-full px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition">
-          Подробнее
-        </button>
+
+        <Link to={`/visites/${id}`}>
+          <button className="w-full px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition">
+            Подробнее
+          </button>
+        </Link>
       </div>
     </div>
-  )
+  );
 }

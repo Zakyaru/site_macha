@@ -1,0 +1,30 @@
+/* flèches visibles et stylées */
+.swiper-button-prev,
+.swiper-button-next {
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  transition: background-color 0.2s ease;
+}
+
+/* .swiper-button-prev:hover,
+.swiper-button-next:hover {
+} */
+
+.swiper-pagination {
+    position: relative !important; /* 👈 pour sortir de l’image */
+    margin-top: 12px;
+    text-align: center;
+  }
+
+.swiper-pagination-bullet {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  margin: 0 5px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: black;
+}

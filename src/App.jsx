@@ -6,12 +6,12 @@ import Layout from "./components/Layout";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="visites" element={<Visites />} />
-          <Route path="visites/details" element={<VisitesDetails />} />
+          <Route path="visites/:id" element={<VisitesDetails />} />
         </Route>
       </Routes>
     </Router>
