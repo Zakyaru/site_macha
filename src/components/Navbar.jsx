@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaHome } from "react-icons/fa";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
-  // Traduction des titres selon le chemin
   const getTabFromPath = (pathname) => {
     if (pathname === "/") return "Главная";
     if (pathname.startsWith("/visites/")) return "Подробно";
@@ -15,7 +14,6 @@ const Navbar = () => {
     if (pathname === "/contact") return "Контакты";
     return "";
   };
-  
 
   const selectedTab = getTabFromPath(location.pathname);
 
@@ -26,11 +24,13 @@ const Navbar = () => {
   return (
     <div>
       <nav className="bg-orange-100 text-black flex items-center justify-between px-6 py-3 shadow-md fixed w-full z-10">
+        <Link to="/" onClick={handleTabClick} className="cursor-pointer">
+          <FaHome size={24} />
+        </Link>
+        <h1 className="text-lg font-semibold">{selectedTab}</h1>
         <button onClick={() => setMenuOpen(true)} className="cursor-pointer">
           <FaBars size={24} />
         </button>
-        <h1 className="text-lg font-semibold">{selectedTab}</h1>
-        <div style={{ width: 24 }} />
       </nav>
 
       {menuOpen && (
@@ -41,8 +41,8 @@ const Navbar = () => {
       )}
 
       <div
-        className={`fixed top-0 left-0 w-3/4 h-full bg-white z-20 p-6 shadow-lg flex flex-col transform transition-transform duration-300 ease-in-out ${
-          menuOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed top-0 right-0 w-3/4 h-full bg-white z-20 p-6 shadow-lg flex flex-col transform transition-transform duration-300 ease-in-out ${
+          menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex justify-between items-center mb-6">
