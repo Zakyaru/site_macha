@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="bg-orange-100 text-black flex items-center justify-between px-6 py-3 shadow-md fixed w-full z-10">
+      <nav className="bg-gray-300 text-black flex items-center justify-between px-6 py-3 shadow-md fixed w-full z-10">
         <Link to="/" onClick={handleTabClick} className="cursor-pointer">
           <FaHome size={24} />
         </Link>
